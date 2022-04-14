@@ -3,21 +3,21 @@ package cn.jackerry.middleware.db.router.annotation;
 import java.lang.annotation.*;
 
 /**
- * @fileName: DBRouter
- * @description: 路由注解
+ * @fileName: DBRouterStrategy
+ * @description: 路由策略，分表标记
  * @author: jackerry
- * @date: 2022/4/13 14:42
+ * @date: 2022/4/14 11:32
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})
-public @interface DBRouter {
+public @interface DBRouterStrategy {
 
     /**
-     * 分库分表字段
+     * 分表标记
      *
      * @return
      */
-    String key() default "";
+    boolean splitTable() default false;
 
 }
