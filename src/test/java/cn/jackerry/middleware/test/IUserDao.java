@@ -1,6 +1,7 @@
 package cn.jackerry.middleware.test;
 
 import cn.jackerry.middleware.db.router.annotation.DBRouter;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @fileName: IUserDao
@@ -8,6 +9,7 @@ import cn.jackerry.middleware.db.router.annotation.DBRouter;
  * @author: jackerry
  * @date: 2022/4/13 14:45
  */
+@Mapper
 public interface IUserDao {
 
     @DBRouter(key = "userId")
